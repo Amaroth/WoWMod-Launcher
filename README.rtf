@@ -1,0 +1,49 @@
+{\rtf1\ansi\ansicpg1250\deff0\deflang1029{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset238 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang1033\f0\fs22 About:\par
+This Launcher's main purpouse is to be easy, fast and convenient to use for both players and admins. Players get their client updated by clicking on one buttons, and admins don't have to spam news with patch releases, links to new versions of patches and so on. Launcher is nearly fully configurable and src is included, so you can do basically whatever you want with it. You can also fully translate your Launcher to your native language (or correct any posible mistakes I made since english ins't my mature language :D). You can also create multiple versions with different languages - all this without actually changing a src. If you happen to need to change src anyway, its written in C# (WinForms) and hopefully not too messy or too badly documented for you.\par
+\lang1029\f1 Please note that this is the first version to ever be released (its actually a configurable remake of already released software, but... well). It is possible there are some unhandled exceptions or even bugs. I have been testing this tool for some time and there shouldn't be any real major issues, but one never really knows for sure. Keep a backup of your game client and don't set KeepBackups in config to 0 unless you are really confident this works correctly.\lang1033\f0\par
+\par
+Launcher is capable of following things:\par
+\lang1029\f1 * \lang1033\f0 Deleting Cache folder.\par
+\lang1029\f1 * \lang1033\f0 Removing (I use different word because optionally the most recent backups\~are being kept) outdated (or on web's filelist missing) MPQs in Data folder.\par
+\lang1029\f1 * \lang1033\f0 Downloading any files specified in web's filelist into any specified local path in WoW's client folder.\par
+\lang1029\f1 * \lang1033\f0 Unziping zipped folders (sadly, only zip is supported, rar, 7z and others not). Useful\~for AddOns.\par
+\lang1029\f1 * \lang1033\f0 Dividing files into two categories - optional, and non-optional. User can choose which optional files are to be downloaded.\par
+\lang1029\f1 * \lang1033\f0 All files can be organized into LinkedLists. If a file with a LinkedList is optional, it is an optional group. Player can either keep all files from an optional group, or none of them. Optional group can contain both files and zipped folder (AddOns).\par
+\lang1029\f1 * \lang1033\f0 Self-updating, if a new version is released. Version system is based on one simple double-typed version number.\par
+\lang1029\f1 * \lang1033\f0 Using different filelists. Which means you can have separated filelist (and files) for GMs/Devs and for players.\par
+\lang1029\f1 * \lang1033\f0 Launcher also includes Changelog Browser (changelog entries have name, date, description and optionally\~a picture).\par
+\lang1029\f1 * \lang1033\f0 There is also a Changelog Editor. To access it, you need to enter FTP login information. This serves for authentization of staff members, and also enables Launcher to upload edited changelog to FTP (so you don't have to put it there by hand).\par
+\lang1029\f1 * \lang1033\f0 File downloading\~fully asynchronously, so users can browse changelog while files are being downloaded. Download speed, progress bar, percentage and stuff like that are being shown as well.\par
+\lang1029\f1 * \lang1033\f0 Displaying of "hello image" which can for example be an image with some breaking news and stuff like that.\par
+\par
+How to configure:\par
+\lang1029\f1 * \lang1033\f0 Rename your Launcher to whatever you want. Something like MyProjectsLauncher.\par
+\lang1029\f1 * \lang1033\f0 Create a folder on your web where web side files will be kept. You can divide multiple things into multiple paths, but I'd recommend you to just have everything at one place. I'll call this a web's root folder (root folder for launcher stuff, not for web as whole, hopefully you\~understand me).\par
+\lang1029\f1 * \lang1033\f0 Your web's root folder must contain file with current Launcher's version (I use launcherversion.conf). This file must contain only one double-typed number with . as a separator. Version of Launcher I'm releasing here is 1.0. You can change your Launcher's version in Core/Config.cs. If Launcher finds that value in launcheversion file is higher that its version, it attempts to update itself.\par
+\lang1029\f1 * \lang1033\f0 Your web's root folder also must contain a zip file with a Launcher, its LauncherConfig.conf and optionally with its LauncherIcon.ico. I've named it Launcher.zip, again, you can rename it.\par
+\lang1029\f1 * \lang1033\f0 Your web's root folder also should contain changelog.xml. If it is empty or isn't found, a new one will be created when you'll try to create a changelong in Changelog Editor.\par
+\lang1029\f1 * \lang1033\f0 Add a hello image (in my case hello.jpg) into your web's root folder. This image will be displayed in Launcher's main window and will most likely be used by you for displaying some breaking news.\par
+\lang1029\f1 * \lang1033\f0 Add a realmlist.wtf file into web's root folder, if you want Launcher to change realmlist of players to your server.\par
+\lang1029\f1 * \lang1033\f0 Also add the most important file for Launcher to your web's root folder: a filelist. I've called it filelist.conf. You can have multiple filelists on your web and release multiple Launcher versions which use different filelists. By using this technique you can release a Launcher for developers and a Launcher for players, which use different filelists and thus can download different files.\par
+\lang1029\f1 * \lang1033\f0 Set your filelist. Follow examples in my filelist which you can find in an example web root folder I've added into this release. Read instructions very carefully, as filelist syntax should be strictly followed. Launcher can handle some fooled up entrys, but not all, and if filelist isn't succesfully readen (or if any files mentioned in it are missing/paths to those files in a filelist are incorrect), Launcher will simply refuse to update a game client.\par
+\lang1029\f1 * \lang1033\f0 Open a ChangelogConfig.xml. You'll need to change all data in Paths element - make really sure that those paths are correct. By doing this you'll connect a Launcher to your website. Pay especially high attention to FTP path to a folder where changelog.xml is, what it should look lile-\par
+\lang1029\f1 * \lang1033\f0 You may want to change something in Main element. Its not very likely, but take a look there.\par
+\lang1029\f1 * \lang1033\f0 MainWindow element contains\~WindowName subelement. You'll most likely want to edit this.\par
+\lang1029\f1 * \lang1033\f0 ChangelogEditor element contains\~DateFormat\~subelement. If you want to change this, DO SO BEFORE YOU CREATE A CHANGELOG. Otherwise you will end up with incompatible changelog and Launcher.\par
+\lang1029\f1 * \lang1033\f0 The rest of ChangelogConfig.xml contains names for UI elements and various messages Launcher can output.\par
+\lang1029\f1 * \lang1033\f0 Create your own icon in PNG format, google some online PNG to ICO converter.\par
+\par
+\lang1029\f1 Done. Test if everything works correctly and release a Launcher. Launcher is to be put into WoW's root directory and thats pretty much all.\par
+\par
+\par
+Making this application took really some time and effort, I had to learn a lot of things to make it work and plan to make more tools and apps for WoW development. If you really like my Launcher and want to give me at least something in return to support me back, my Paypal account is:\par
+jantoms@seznam.cz\par
+Its ofc up to you. Launcher is here for free, with source included. Do whatever you want with it.\par
+Contact:\par
+Skype: striker159753\par
+Mail: Amaroth7@seznam.cz\par
+Changelog: {\field{\*\fldinst{HYPERLINK "http://www.model-changing.net/files/file/88-amaroths-launcher/"}}{\fldrslt{\ul\cf1 http://www.model-changing.net/files/file/88-amaroths-launcher/}}}\lang1033\f0\fs22\par
+}
+ 
