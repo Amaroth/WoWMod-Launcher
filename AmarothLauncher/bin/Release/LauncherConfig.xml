@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This is a config file for Launcher. Feel free to edit whatever you want or even translate Launcher to your native language. Pay close attention to comments and documentation.-->
+<Config>
+
+  <!--Main settings of an application.-->
+  <Main>
+    <!--DeleteCache: 1 or 0. If 1, Cache folder is always deleted.-->
+    <DeleteCache>1</DeleteCache>
+
+    <!--KeepBackups: 1 or 0. If 1, .ext_ files are being kept as backups. Recommended 1.-->
+    <KeepBackups>1</KeepBackups>
+
+    <!--KeepBlizzlikeMPQs: 1 or 0. If 1, blizzlike MPQs in Data are ignored by Launcher. Otherwise they are handled in a same manner as custom one. Recommended 1.-->
+    <KeepBlizzlikeMPQs>1</KeepBlizzlikeMPQs>
+
+    <!--ForcedRealmlist: 1 or 0. If 1, realmlist.wtf will always be updated to match realmlist.wtf in FilesRootPath.-->
+    <ForcedRealmlist>1</ForcedRealmlist>
+
+    <!--FileProcessingOutputs: 1 or 0. If 1, messages about downloading and unziping files will be shown.-->
+    <FileProcessingOutputs>1</FileProcessingOutputs>
+  </Main>
+
+  <!--Paths to files and folders Launcher will work with. They are commonly all !CASE SENSITIVE!-->
+  <Paths>
+    <!--FilelistPath: Path to text filelist.-->
+    <FilelistPath>http://www.example.com/files/filelist.conf</FilelistPath>
+
+    <!--VersionPath: Path to text file which contains your Lancher's current version (version is a double value with . as separator!-->
+    <VersionPath>http://www.example.com/files/launcherversion.conf</VersionPath>
+
+    <!--LauncherPath: Path to a zip file with Launcher files - used if Launcher finds itself outdated.-->
+    <LauncherPath>http://www.exeample.com/files/Launcher.zip</LauncherPath>
+
+    <!--FilesRootPath: Path to folder with files. Paths in filelist are relative to this path.-->
+    <FilesRootPath>http://www.example.com/files/</FilesRootPath>
+
+    <!--ChangelogPath: !HTTP! path to changelog XML file.-->
+    <ChangelogPath>http://www.example.com/files/changelog.xml</ChangelogPath>
+
+    <!--ChangelogFTPPath: !Full! !FTP! path to folder in which changelog is. Notice that //www/ part. You may want to use an IP instead of a domain name.-->
+    <ChangelogFTPPath>ftp://ftp.example.com//www/files/</ChangelogFTPPath>
+
+    <!--Webpage: URL which is to be opened when user clicks on Project webpage button.-->
+    <Webpage>http://www.example.com</Webpage>
+
+    <!--Registration: URL which is to be opened when user clicks on Registration button.-->
+    <Registration>http://reg.example.com</Registration>
+
+    <!--Instructions: URL which is to be opened when user clicks on Launcher manual button.-->
+    <Instructions>http://www.example.com/launchermanual/</Instructions>
+
+    <!--HelloImage: URL to image which is to be displayed in Main window (latest news image). Clicking on it opens a changelog browser.-->
+    <HelloImage>http://www.example.com/files/hello.jpg</HelloImage>
+  </Paths>
+
+  <!--Visual settings for Main Window.-->
+  <MainWindow>
+    <!--WindowName: Name of main window. Change this to match your project's name.-->
+    <WindowName>Amaroth's Launcher 1.1</WindowName>
+
+    <OutputBox>Text output:</OutputBox>
+    <OptionalBox>Optional files:</OptionalBox>
+    <CheckForUpdatesButton>Check for updates</CheckForUpdatesButton>
+    <UpdateButton>Update</UpdateButton>
+    <WebpageButton>Project webpage</WebpageButton>
+    <RegistrationButton>Registration</RegistrationButton>
+    <LauncherInstructionsButton>Launcher manual</LauncherInstructionsButton>
+    <DeleteBackupsButton>Delete .ext_ backups</DeleteBackupsButton>
+    <ChangelogEditorButton>Changelog editor</ChangelogEditorButton>
+    <ChangelogBrowserButton>Changelog browser</ChangelogBrowserButton>
+    <LaunchButton>Launch</LaunchButton>
+    <ProgressText>Downloading: </ProgressText>
+    <ProgressSeparator> / </ProgressSeparator>
+    <DownloadSpeedUnits>/s, </DownloadSpeedUnits>
+    <remaining>remaining</remaining>
+    <downloaded>downloaded, </downloaded>
+    <ToolTipTotalSize>Total size: </ToolTipTotalSize>
+    <PanelTotalSize>Total size of outdated:</PanelTotalSize>
+    <LabelTotalSizeOpt>Chosen optionals: </LabelTotalSizeOpt>
+    <LabelTotalSizeNonOpt>Non-optionals: </LabelTotalSizeNonOpt>
+    <second> s </second>
+    <minute> m </minute>
+    <hour> h </hour>
+    <Complete>Download complete!</Complete>
+    <Errors>Errors occured!</Errors>
+  </MainWindow>
+
+  <!--Visual settings for Changelog Editor. A lot of those are used by Changelog Browser as well.-->
+  <ChangelogEditor>
+    <WindowName>Changelog Editor</WindowName>
+    <ChangelogEntries>Changelog entries:</ChangelogEntries>
+    <DateColumn>Date</DateColumn>
+    <HeadingColumn>Heading</HeadingColumn>
+    <Date>Date:</Date>
+
+    <!--DateFormat: Carefully with this. MM for months, mm for minutes. You can use your own format, but it must be correct. Changelog's data must also be compatible with this, if your changelog isn't empty when this is being changed!-->
+    <DateFormat>yyyy.MM.dd hh:mm</DateFormat>
+
+    <PictureURL>Picture URL:</PictureURL>
+    <Heading>Heading:</Heading>
+    <PicturePreview>Picture preview:</PicturePreview>
+    <Description>Description:</Description>
+    <EditEntryButton>Edit entry</EditEntryButton>
+    <DeleteEntryButton>Delete entry</DeleteEntryButton>
+    <CreateEntryButton>Create entry</CreateEntryButton>
+    <SaveEntryButton>Save entry</SaveEntryButton>
+    <TestPictureButton>Test picture</TestPictureButton>
+    <CancelButton>Cancel changes</CancelButton>
+    <SaveButton>Save changelog</SaveButton>
+  </ChangelogEditor>
+
+  <!--Visual settings for Changelog Browser.-->
+  <ChangelogBrowser>
+    <WindowName>Changelog Browser</WindowName>
+    <InfoText>Click on an entry in entries list in order to display it.</InfoText>
+    <Picture>Picture:</Picture>
+  </ChangelogBrowser>
+
+  <!--Visual settings for authentization dialog window for Changelog Editor.-->
+  <FTPLoginWindow>
+    <WindowName>Login to FTP</WindowName>
+    <Login>Login:</Login>
+    <Password>Password:</Password>
+    <OKButton>OK</OKButton>
+    <CancelButton>Cancel</CancelButton>
+  </FTPLoginWindow>
+
+  <!--Various messages which can be output by Launcher.-->
+  <Messages>
+    <!--HelloMessage: Please, leave this here. If you want to add anything, add it behind original message.-->
+    <HelloMessage>This Launcher was coded by Amaroth from www.model-changing.net.</HelloMessage>
+
+    <XmlNotOpened>Default settings are being used, because LauncherConfig.xml could not be loaded. Launcher can't continue. Get a new config file!</XmlNotOpened>
+    <ChangelogNotOpened>Failed to open a changelog file on web.</ChangelogNotOpened>
+    <ChangelogNotLoaded>Failed to load changelog data. Please, contact support.</ChangelogNotLoaded>
+    <ChangelogEmpty>Warning: changelog is empty. You are currently creating a new one.</ChangelogEmpty>
+    <InvalidFtpPassword>Incorrect login - password combination, or incorrect FTP path to changelog.</InvalidFtpPassword>
+    <PictureNotOpened>Picture from given URL could not be opened. URL seems to be invalid.</PictureNotOpened>
+    <ChangelogNotUploaded>Changelog could not be uploaded. Backup XML file can be found in Launcher's directory.</ChangelogNotUploaded>
+    <ChangelogUploadOK>Changelog was succesfully updated.</ChangelogUploadOK>
+    <UnZipingFileError>Failed to unzip file: </UnZipingFileError>
+    <DownloadingFrom>Downloading file from: </DownloadingFrom>
+    <DownloadingTo>To: </DownloadingTo>
+    <UnzipingFile>Unziping file: </UnzipingFile>
+    <FileDeletingError>Failed to delete file: </FileDeletingError>
+    <WowExeMissing>WoW.exe was not found!</WowExeMissing>
+    <DataDirMissing>Data directory was not found!</DataDirMissing>
+    <BlizzlikeMpqMissing>Failed to find essential file: </BlizzlikeMpqMissing>
+    <LauncherNotInWowDir>Your WoW client is either damaged, or Launcher is not in WoW root directory.</LauncherNotInWowDir>
+    <FilelistOpeningFailed>Launcher could not open filelist on web. Check your internet connection, or contact your support team. Error message: </FilelistOpeningFailed>
+    <FilelistReadingFailed>Filelist on web is invalid. Contact your support team.</FilelistReadingFailed>
+    <FileOnsWebMissing>File's size could not be found. File is probably missing on web server. </FileOnsWebMissing>
+    <WebRealmlistMissing>File realmlist.wtf could not be found on web. Realmlist could not be verified.</WebRealmlistMissing>
+    <RealmlistMissing>It appears local realmlist.wtf is missing. Create a new one if it is so.</RealmlistMissing>
+    <OptionalsPresetLoadFailed>You don't have saved optional groups selection, or list of them has changed. Please, pay attention optional files checkbox list before you click on an Update button.</OptionalsPresetLoadFailed>
+    <DownloadError>Error occured while followin file was being downloaded: </DownloadError>
+    <FileDownloadError>Some files apparently weren't succesfully downloaded. Re-run Check for updates and Update.</FileDownloadError>
+    <HelloImageNotLoaded>News image could not be loaded.</HelloImageNotLoaded>
+    <VersionNotVerified>Launcher could not verify wheter it is up to date. It will proceed as normal, but notify your support team about this issue if it persists.</VersionNotVerified>
+    <CouldNotBeUpdated>Launcher has attempted an update of itself, but it was not successful. Try to re-run a Launcher and contact your support team if issue persists.</CouldNotBeUpdated>
+    <OutdatedLauncher>There seems to be a new version of Launcher on web. Launcher will attempt an update and then restart.</OutdatedLauncher>
+    <LauncherUpdated>Launcher has been succesfully updated. Please, run Launcher again.</LauncherUpdated>
+    <Removing>Removing file: </Removing>
+  </Messages>
+
+</Config>
